@@ -23,7 +23,7 @@ namespace lib.Providers
 			}
 		}
 
-		public async Task ReplaceAsync(HttpResponse target, HttpResponseMessage source, ReplaceString[] replacements)
+		public virtual async Task ReplaceAsync(HttpResponse target, HttpResponseMessage source, ReplaceString[] replacements)
 		{
 			var result = await source.Content.ReadAsStringAsync();
 

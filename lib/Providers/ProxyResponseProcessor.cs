@@ -24,7 +24,7 @@ namespace lib.Providers
 			this.bodyStringReplacer = bodyStringReplacer;
 		}
 
-		public async Task<HttpResponse> ProcessResponseAsync(HttpResponseMessage response, IHttpResponseBodyFeature httpResponseBodyFeature)
+		public virtual async Task<HttpResponse> ProcessResponseAsync(HttpResponseMessage response, IHttpResponseBodyFeature httpResponseBodyFeature)
 		{
 			return await GetResponseAsync(response, httpResponseBodyFeature);
 		}

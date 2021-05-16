@@ -24,7 +24,7 @@ namespace lib.Providers
 			this.bodyStringReplacer = bodyStringReplacer;
 		}
 
-		public async Task<HttpResponseMessage> ProcessRequestAsync(HttpRequest request)
+		public virtual async Task<HttpResponseMessage> ProcessRequestAsync(HttpRequest request)
 		{
 			using (var handler = httpClientHandlerFactory.GetHandler())
 			using (var client = new HttpClient(handler))

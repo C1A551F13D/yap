@@ -18,7 +18,7 @@ namespace lib.Providers
 			this.settings = settings.Value;
 		}
 
-		public HttpClientHandler GetHandler()
+		public virtual HttpClientHandler GetHandler()
 		{
 			if (httpClientHandler == null)
 			{

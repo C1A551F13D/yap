@@ -14,7 +14,7 @@ namespace lib.Providers
 			this.settings = settings.Value;
 		}
 
-		public void Initialize(HttpClientHandler handler)
+		public virtual void Initialize(HttpClientHandler handler)
 		{
 			if (!string.IsNullOrWhiteSpace(settings.UpstreamProxy.Host))
 			{

@@ -13,7 +13,7 @@ namespace lib.Providers
 			this.httpResponseProcessor = httpResponseProcessor;
 		}
 
-		public async Task ProcessContextAsync(HttpContext context)
+		public virtual async Task ProcessContextAsync(HttpContext context)
 		{
 			await httpResponseProcessor.ProcessContextAsync(context);
 		}

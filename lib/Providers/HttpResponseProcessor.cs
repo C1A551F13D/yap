@@ -20,7 +20,7 @@ namespace lib.Providers
 			this.proxyResponseProcessor = proxyResponseProcessor;
 		}
 
-		public async Task ProcessContextAsync(HttpContext context)
+		public virtual async Task ProcessContextAsync(HttpContext context)
 		{
 			var httpResponseBodyFeature = context.Features.Get<IHttpResponseBodyFeature>();
 			var response = await proxyRequestProcessor.ProcessRequestAsync(context.Request);
