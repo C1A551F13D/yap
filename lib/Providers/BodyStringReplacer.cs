@@ -32,7 +32,8 @@ namespace lib.Providers
 				result = result.Replace(replacement.OldValue, replacement.NewValue);
 			}
 
-			var encoding = Encoding.GetEncoding(source.Content.Headers.ContentType.CharSet ?? "UTF-8");
+			var charset = source.Content.Headers.ContentType.CharSet;
+			var encoding = Encoding.GetEncoding(charset?.Replace("\"", string.Empty) ?? "UTF-8");
 
 			var body = encoding.GetBytes(result);
 			await target.Body.WriteAsync(body, 0, body.Length);
